@@ -13,6 +13,8 @@
 		55BDF88E20FD16B6000C3E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF88C20FD16B6000C3E49 /* Main.storyboard */; };
 		55BDF89020FD16D1000C3E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF88F20FD16D1000C3E49 /* Assets.xcassets */; };
 		55BDF89320FD16D1000C3E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF89120FD16D1000C3E49 /* LaunchScreen.storyboard */; };
+		55BDF89E20FD3B3F000C3E49 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDF89D20FD3B3F000C3E49 /* CategoriesController.swift */; };
+		55BDF8A020FD3DCE000C3E49 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF89F20FD3DCE000C3E49 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		55BDF88F20FD16D1000C3E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55BDF89220FD16D1000C3E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55BDF89420FD16D1000C3E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55BDF89D20FD3B3F000C3E49 /* CategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
+		55BDF89F20FD3DCE000C3E49 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8DCE34A876AF6935B08DF57D /* Pods-TriviaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriviaGame/Pods-TriviaGame.release.xcconfig"; sourceTree = "<group>"; };
 		EF44C76341D1F711FC765BCC /* Pods-TriviaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriviaGame/Pods-TriviaGame.debug.xcconfig"; sourceTree = "<group>"; };
 		FD5BE15D2B405BA1A67CFC0D /* Pods_TriviaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriviaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,7 @@
 		55BDF87C20FD16B6000C3E49 = {
 			isa = PBXGroup;
 			children = (
+				55BDF89F20FD3DCE000C3E49 /* Default-568h@2x.png */,
 				55BDF88720FD16B6000C3E49 /* TriviaGame */,
 				55BDF88620FD16B6000C3E49 /* Products */,
 				EB97E883EB11270985745358 /* Pods */,
@@ -73,6 +78,7 @@
 				55BDF89B20FD1D8F000C3E49 /* SupportingFiles */,
 				55BDF89A20FD1D87000C3E49 /* Storyboards */,
 				55BDF88F20FD16D1000C3E49 /* Assets.xcassets */,
+				55BDF89420FD16D1000C3E49 /* Info.plist */,
 			);
 			path = TriviaGame;
 			sourceTree = "<group>";
@@ -89,7 +95,6 @@
 		55BDF89B20FD1D8F000C3E49 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				55BDF89420FD16D1000C3E49 /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				55BDF88A20FD16B6000C3E49 /* ViewController.swift */,
 				55BDF88820FD16B6000C3E49 /* AppDelegate.swift */,
+				55BDF89D20FD3B3F000C3E49 /* CategoriesController.swift */,
 			);
 			path = SwiftFiles;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BDF89320FD16D1000C3E49 /* LaunchScreen.storyboard in Resources */,
+				55BDF8A020FD3DCE000C3E49 /* Default-568h@2x.png in Resources */,
 				55BDF89020FD16D1000C3E49 /* Assets.xcassets in Resources */,
 				55BDF88E20FD16B6000C3E49 /* Main.storyboard in Resources */,
 			);
@@ -228,6 +235,7 @@
 			files = (
 				55BDF88B20FD16B6000C3E49 /* ViewController.swift in Sources */,
 				55BDF88920FD16B6000C3E49 /* AppDelegate.swift in Sources */,
+				55BDF89E20FD3B3F000C3E49 /* CategoriesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
