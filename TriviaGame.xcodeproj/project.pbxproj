@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20CF71E09C36F7ADFBAE1134 /* Pods_TriviaGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5BE15D2B405BA1A67CFC0D /* Pods_TriviaGame.framework */; };
+		556EA93C20FE69C8006799C9 /* Kellen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556EA93B20FE69C8006799C9 /* Kellen.storyboard */; };
 		55BDF88920FD16B6000C3E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDF88820FD16B6000C3E49 /* AppDelegate.swift */; };
 		55BDF88B20FD16B6000C3E49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDF88A20FD16B6000C3E49 /* ViewController.swift */; };
 		55BDF88E20FD16B6000C3E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF88C20FD16B6000C3E49 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		556EA93B20FE69C8006799C9 /* Kellen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Kellen.storyboard; sourceTree = "<group>"; };
 		55BDF88520FD16B6000C3E49 /* TriviaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BDF88820FD16B6000C3E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55BDF88A20FD16B6000C3E49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				55BDF89120FD16D1000C3E49 /* LaunchScreen.storyboard */,
 				55BDF88C20FD16B6000C3E49 /* Main.storyboard */,
+				556EA93B20FE69C8006799C9 /* Kellen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				55BDF89320FD16D1000C3E49 /* LaunchScreen.storyboard in Resources */,
 				55BDF8A020FD3DCE000C3E49 /* Default-568h@2x.png in Resources */,
+				556EA93C20FE69C8006799C9 /* Kellen.storyboard in Resources */,
 				55BDF89020FD16D1000C3E49 /* Assets.xcassets in Resources */,
 				55BDF88E20FD16B6000C3E49 /* Main.storyboard in Resources */,
 			);
