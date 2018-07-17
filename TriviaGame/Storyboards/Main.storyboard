@@ -91,10 +91,6 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-<<<<<<< HEAD
-=======
-                                                    <action selector="generalButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="Bla-dW-Ubz"/>
->>>>>>> Implementing-API
                                                     <segue destination="8kk-45-eEm" kind="show" identifier="pressedGeneral" id="Zeu-vO-R1r"/>
                                                 </connections>
                                             </button>
@@ -210,14 +206,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RVb-l1-yEG"/>
                     </view>
-                    <connections>
-                        <outlet property="gamesButton" destination="Fkg-d8-Pe5" id="wYi-dL-5AX"/>
-                        <outlet property="generalButton" destination="MGD-fe-19Y" id="QjU-KV-j9q"/>
-                        <outlet property="historyButton" destination="w0A-XB-kDe" id="SDe-xw-3Yl"/>
-                        <outlet property="moviesButton" destination="OUz-YJ-jjS" id="HaJ-oH-cNd"/>
-                        <outlet property="scienceButton" destination="2mU-37-YEc" id="oUA-yI-De4"/>
-                        <outlet property="sportsButton" destination="sfL-mO-rcc" id="mh5-0P-pS5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgc-Pu-pg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
