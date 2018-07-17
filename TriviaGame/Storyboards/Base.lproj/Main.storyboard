@@ -96,7 +96,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-FM-gaC">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-FM-gaC">
                                 <rect key="frame" x="231" y="327" width="117" height="42"/>
                                 <color key="backgroundColor" red="0.95643446180555558" green="0.092436538827777789" blue="0.41902669270833331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -115,19 +115,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="Games">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-GF-Krh">
-                                <rect key="frame" x="231" y="468" width="117" height="42"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="fZU-EZ-bim"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="History">
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -153,20 +140,41 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-GF-Krh">
+                                <rect key="frame" x="231" y="468" width="117" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="EYa-yc-Zzs"/>
+                                    <constraint firstAttribute="width" constant="55" id="fZU-EZ-bim"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="tcCharcoal"/>
                         <constraints>
                             <constraint firstItem="DEf-TN-0Rd" firstAttribute="top" secondItem="hjK-gD-GLg" secondAttribute="bottom" constant="111" id="0H3-oP-via"/>
+                            <constraint firstItem="k9t-GF-Krh" firstAttribute="leading" secondItem="BBz-FM-gaC" secondAttribute="leading" id="0Yy-R3-ay0"/>
                             <constraint firstItem="EKs-Cn-sxd" firstAttribute="top" secondItem="KfA-AW-oKm" secondAttribute="bottom" constant="64" id="2KN-We-qSG"/>
+                            <constraint firstItem="k9t-GF-Krh" firstAttribute="top" secondItem="BBz-FM-gaC" secondAttribute="bottom" constant="99" id="2WB-gt-E0Q"/>
                             <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="BBz-FM-gaC" secondAttribute="trailing" constant="50" id="8hg-bI-eQL"/>
+                            <constraint firstItem="k9t-GF-Krh" firstAttribute="leading" secondItem="EKs-Cn-sxd" secondAttribute="leading" id="J2m-y0-8Si"/>
                             <constraint firstItem="DEf-TN-0Rd" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="50" id="JIk-5u-g3p"/>
                             <constraint firstItem="geE-JN-2uO" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="50" id="Q2f-Qq-seH"/>
                             <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="KfA-AW-oKm" secondAttribute="trailing" constant="15" id="Q8j-mS-Re9"/>
+                            <constraint firstItem="k9t-GF-Krh" firstAttribute="bottom" secondItem="DEf-TN-0Rd" secondAttribute="bottom" id="RzH-qx-aqq"/>
+                            <constraint firstItem="k9t-GF-Krh" firstAttribute="leading" secondItem="DEf-TN-0Rd" secondAttribute="trailing" constant="64" id="TLb-HQ-JGM"/>
                             <constraint firstItem="geE-JN-2uO" firstAttribute="top" secondItem="KfA-AW-oKm" secondAttribute="bottom" constant="64" id="U8M-8z-Gbi"/>
                             <constraint firstItem="hjK-gD-GLg" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="50" id="X8B-Jx-Ji3"/>
                             <constraint firstItem="KfA-AW-oKm" firstAttribute="top" secondItem="NG7-gR-4jm" secondAttribute="top" constant="24" id="Z8K-bB-TBG"/>
                             <constraint firstItem="BBz-FM-gaC" firstAttribute="top" secondItem="EKs-Cn-sxd" secondAttribute="bottom" constant="124" id="hKo-oS-wUd"/>
+                            <constraint firstItem="NG7-gR-4jm" firstAttribute="bottom" secondItem="k9t-GF-Krh" secondAttribute="bottom" constant="157" id="jlz-JK-udJ"/>
                             <constraint firstItem="hjK-gD-GLg" firstAttribute="top" secondItem="geE-JN-2uO" secondAttribute="bottom" constant="124" id="poj-4O-Dbm"/>
+                            <constraint firstItem="k9t-GF-Krh" firstAttribute="top" secondItem="DEf-TN-0Rd" secondAttribute="top" id="qqZ-Ge-jHw"/>
                             <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="EKs-Cn-sxd" secondAttribute="trailing" constant="50" id="r5W-FL-pst"/>
                             <constraint firstItem="KfA-AW-oKm" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="15" id="xk1-DS-yMQ"/>
                         </constraints>
