@@ -15,6 +15,7 @@
 		55BDF89320FD16D1000C3E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF89120FD16D1000C3E49 /* LaunchScreen.storyboard */; };
 		55BDF89E20FD3B3F000C3E49 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDF89D20FD3B3F000C3E49 /* CategoriesController.swift */; };
 		55BDF8A020FD3DCE000C3E49 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF89F20FD3DCE000C3E49 /* Default-568h@2x.png */; };
+		F1211F2D20FEB0A6006EE2BB /* backup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1211F2C20FEB0A6006EE2BB /* backup.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		55BDF89F20FD3DCE000C3E49 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8DCE34A876AF6935B08DF57D /* Pods-TriviaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriviaGame/Pods-TriviaGame.release.xcconfig"; sourceTree = "<group>"; };
 		EF44C76341D1F711FC765BCC /* Pods-TriviaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriviaGame/Pods-TriviaGame.debug.xcconfig"; sourceTree = "<group>"; };
+		F1211F2C20FEB0A6006EE2BB /* backup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = backup.storyboard; sourceTree = "<group>"; };
 		FD5BE15D2B405BA1A67CFC0D /* Pods_TriviaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriviaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			children = (
 				55BDF89120FD16D1000C3E49 /* LaunchScreen.storyboard */,
 				556EA93B20FE69C8006799C9 /* Main.storyboard */,
+				F1211F2C20FEB0A6006EE2BB /* backup.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				55BDF89320FD16D1000C3E49 /* LaunchScreen.storyboard in Resources */,
 				55BDF8A020FD3DCE000C3E49 /* Default-568h@2x.png in Resources */,
+				F1211F2D20FEB0A6006EE2BB /* backup.storyboard in Resources */,
 				556EA93C20FE69C8006799C9 /* Main.storyboard in Resources */,
 				55BDF89020FD16D1000C3E49 /* Assets.xcassets in Resources */,
 			);
