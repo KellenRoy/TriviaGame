@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="chF-uG-Akk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -73,99 +73,120 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUz-YJ-jjS">
-                                <rect key="frame" x="231" y="169" width="117" height="42"/>
-                                <color key="backgroundColor" red="0.95643446180000002" green="0.69352213539999996" blue="0.98491753469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-mz-bPb">
+                                <rect key="frame" x="16" y="169" width="343" height="402"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OR8-tk-QkQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGD-fe-19Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <inset key="contentEdgeInsets" minX="32" minY="16" maxX="32" maxY="16"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="General">
+                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedGeneral" id="Zeu-vO-R1r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUz-YJ-jjS">
+                                                <rect key="frame" x="223" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="0.95643446180000002" green="0.69352213539999996" blue="0.98491753469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Movies">
+                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedMovies" id="hhh-3N-GSa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OUz-YJ-jjS" firstAttribute="height" secondItem="MGD-fe-19Y" secondAttribute="height" id="Dll-5M-Q15"/>
+                                            <constraint firstItem="OUz-YJ-jjS" firstAttribute="width" secondItem="MGD-fe-19Y" secondAttribute="width" id="iZ2-95-iKd"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-s0-2VJ">
+                                        <rect key="frame" x="0.0" y="176" width="343" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-d8-Pe5">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="0.57919406890000003" green="0.30376519099999999" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Games">
+                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedGames" id="vjj-GO-9ae"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-mO-rcc">
+                                                <rect key="frame" x="223" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="0.95643446180000002" green="0.092436538829999998" blue="0.41902669269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Sports">
+                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8kk-45-eEm" kind="showDetail" identifier="pressedSports" id="oJL-XQ-RCa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1Jt-2G-NYW">
+                                        <rect key="frame" x="0.0" y="352" width="343" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mU-37-YEc">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" name="tcSeafoamGreen"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Science">
+                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedScience" id="UBy-P0-CsS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0A-XB-kDe">
+                                                <rect key="frame" x="223" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="History">
+                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedHistory" id="mDL-da-NrR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="54" id="6fH-57-vv6"/>
+                                    <constraint firstItem="Fkg-d8-Pe5" firstAttribute="width" secondItem="MGD-fe-19Y" secondAttribute="width" id="5zD-O3-tAi"/>
+                                    <constraint firstItem="w0A-XB-kDe" firstAttribute="width" secondItem="MGD-fe-19Y" secondAttribute="width" id="F6R-kH-ZvG"/>
+                                    <constraint firstItem="2mU-37-YEc" firstAttribute="width" secondItem="MGD-fe-19Y" secondAttribute="width" id="kEH-e9-pxX"/>
+                                    <constraint firstItem="w0A-XB-kDe" firstAttribute="height" secondItem="MGD-fe-19Y" secondAttribute="height" id="lQ8-cz-1Kw"/>
+                                    <constraint firstItem="sfL-mO-rcc" firstAttribute="height" secondItem="MGD-fe-19Y" secondAttribute="height" id="wtY-MO-IjD"/>
+                                    <constraint firstItem="sfL-mO-rcc" firstAttribute="width" secondItem="MGD-fe-19Y" secondAttribute="width" id="xAS-Zd-gSC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Movies">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedMovies" id="hhh-3N-GSa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mU-37-YEc">
-                                <rect key="frame" x="50" y="468" width="117" height="42"/>
-                                <color key="backgroundColor" name="tcSeafoamGreen"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Science">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedScience" id="UBy-P0-CsS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-mO-rcc">
-                                <rect key="frame" x="231" y="327" width="117" height="42"/>
-                                <color key="backgroundColor" red="0.95643446180000002" green="0.092436538829999998" blue="0.41902669269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Sports">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kk-45-eEm" kind="showDetail" identifier="pressedSports" id="oJL-XQ-RCa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-d8-Pe5">
-                                <rect key="frame" x="50" y="327" width="117" height="42"/>
-                                <color key="backgroundColor" red="0.57919406890000003" green="0.30376519099999999" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="sCv-Cx-5Cd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Games">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedGames" id="vjj-GO-9ae"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0A-XB-kDe">
-                                <rect key="frame" x="271" y="468" width="55" height="42"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="LOu-fP-8MR"/>
-                                    <constraint firstAttribute="width" constant="55" id="xxb-HG-rIH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="History">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedHistory" id="mDL-da-NrR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGD-fe-19Y">
-                                <rect key="frame" x="50" y="169" width="117" height="42"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="NlQ-Bs-GBR"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="General">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedGeneral" id="Zeu-vO-R1r"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di9-yj-Pxh">
-                                <rect key="frame" x="22" y="44" width="345" height="61"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di9-yj-Pxh">
+                                <rect key="frame" x="15" y="44" width="345" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -175,26 +196,13 @@
                         </subviews>
                         <color key="backgroundColor" name="tcCharcoal"/>
                         <constraints>
-                            <constraint firstItem="w0A-XB-kDe" firstAttribute="leading" secondItem="OUz-YJ-jjS" secondAttribute="leading" id="2O6-Bh-6Cb"/>
-                            <constraint firstItem="OUz-YJ-jjS" firstAttribute="top" secondItem="di9-yj-Pxh" secondAttribute="bottom" constant="64" id="2qb-VL-3ry"/>
-                            <constraint firstItem="w0A-XB-kDe" firstAttribute="top" secondItem="sfL-mO-rcc" secondAttribute="bottom" constant="99" id="5C3-db-omB"/>
-                            <constraint firstItem="w0A-XB-kDe" firstAttribute="leading" secondItem="2mU-37-YEc" secondAttribute="trailing" constant="64" id="ELX-4e-bcS"/>
+                            <constraint firstItem="VaL-mz-bPb" firstAttribute="top" secondItem="di9-yj-Pxh" secondAttribute="bottom" constant="64" id="GGv-aE-Sh9"/>
                             <constraint firstItem="di9-yj-Pxh" firstAttribute="top" secondItem="RVb-l1-yEG" secondAttribute="top" constant="24" id="OEc-Tz-Y0z"/>
-                            <constraint firstItem="2mU-37-YEc" firstAttribute="top" secondItem="Fkg-d8-Pe5" secondAttribute="bottom" constant="111" id="QgO-ld-hYS"/>
-                            <constraint firstItem="Fkg-d8-Pe5" firstAttribute="top" secondItem="MGD-fe-19Y" secondAttribute="bottom" constant="124" id="Tr3-u5-sJc"/>
-                            <constraint firstItem="w0A-XB-kDe" firstAttribute="bottom" secondItem="2mU-37-YEc" secondAttribute="bottom" id="UBx-ip-Abf"/>
-                            <constraint firstItem="w0A-XB-kDe" firstAttribute="top" secondItem="2mU-37-YEc" secondAttribute="top" id="Z6M-Fr-61H"/>
-                            <constraint firstItem="RVb-l1-yEG" firstAttribute="trailing" secondItem="sfL-mO-rcc" secondAttribute="trailing" constant="50" id="bCu-Aj-8Ck"/>
+                            <constraint firstItem="RVb-l1-yEG" firstAttribute="trailing" secondItem="VaL-mz-bPb" secondAttribute="trailing" constant="16" id="QHY-ZB-rPC"/>
                             <constraint firstItem="di9-yj-Pxh" firstAttribute="leading" secondItem="RVb-l1-yEG" secondAttribute="leading" constant="15" id="e7L-f9-loG"/>
-                            <constraint firstItem="MGD-fe-19Y" firstAttribute="leading" secondItem="RVb-l1-yEG" secondAttribute="leading" constant="50" id="e9M-32-8MD"/>
-                            <constraint firstItem="RVb-l1-yEG" firstAttribute="bottom" secondItem="w0A-XB-kDe" secondAttribute="bottom" constant="157" id="g0c-9j-jFE"/>
-                            <constraint firstItem="Fkg-d8-Pe5" firstAttribute="leading" secondItem="RVb-l1-yEG" secondAttribute="leading" constant="50" id="gxd-Ma-BUR"/>
-                            <constraint firstItem="RVb-l1-yEG" firstAttribute="trailing" secondItem="OUz-YJ-jjS" secondAttribute="trailing" constant="50" id="iUI-2b-bGy"/>
-                            <constraint firstItem="sfL-mO-rcc" firstAttribute="top" secondItem="OUz-YJ-jjS" secondAttribute="bottom" constant="124" id="oBM-UD-VeO"/>
-                            <constraint firstItem="MGD-fe-19Y" firstAttribute="top" secondItem="di9-yj-Pxh" secondAttribute="bottom" constant="64" id="q04-go-IT3"/>
-                            <constraint firstItem="w0A-XB-kDe" firstAttribute="leading" secondItem="sfL-mO-rcc" secondAttribute="leading" id="qOR-e7-Vbm"/>
-                            <constraint firstItem="2mU-37-YEc" firstAttribute="leading" secondItem="RVb-l1-yEG" secondAttribute="leading" constant="50" id="xje-3H-d4d"/>
+                            <constraint firstItem="RVb-l1-yEG" firstAttribute="bottom" secondItem="VaL-mz-bPb" secondAttribute="bottom" constant="96" id="vVb-ue-FEP"/>
                             <constraint firstItem="RVb-l1-yEG" firstAttribute="trailing" secondItem="di9-yj-Pxh" secondAttribute="trailing" constant="15" id="zJk-P4-aIt"/>
+                            <constraint firstItem="VaL-mz-bPb" firstAttribute="leading" secondItem="RVb-l1-yEG" secondAttribute="leading" constant="16" id="zv5-E4-QsN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RVb-l1-yEG"/>
                     </view>
@@ -228,6 +236,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mDL-da-NrR"/>
+        <segue reference="UBy-P0-CsS"/>
     </inferredMetricsTieBreakers>
 </document>
