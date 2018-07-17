@@ -21,6 +21,11 @@ class CategoriesController: UIViewController {
     @IBOutlet weak var historyButton: UIButton!
     
     
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var firstAnswerChoice: UILabel!
+    @IBOutlet weak var secondAnswerChoice: UILabel!
+    @IBOutlet weak var thirdAnswerChoice: UILabel!
+    @IBOutlet weak var fourthAnswerChoice: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +38,6 @@ class CategoriesController: UIViewController {
     }
     
     
-    
-
     
     @IBAction func generalButtonPressed(_ sender: Any) {
         
