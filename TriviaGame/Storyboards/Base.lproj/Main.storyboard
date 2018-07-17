@@ -73,112 +73,109 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-AW-oKm">
-                                <rect key="frame" x="15" y="44" width="345" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-Cn-sxd">
+                                <rect key="frame" x="231" y="169" width="117" height="42"/>
+                                <color key="backgroundColor" red="0.95643446180555558" green="0.69352213541666663" blue="0.98491753472222221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="DJ3-9d-xK1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Movies">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-TN-0Rd">
+                                <rect key="frame" x="50" y="468" width="117" height="42"/>
+                                <color key="backgroundColor" name="tcSeafoamGreen"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Science">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-FM-gaC">
+                                <rect key="frame" x="231" y="327" width="117" height="42"/>
+                                <color key="backgroundColor" red="0.95643446180555558" green="0.092436538827777789" blue="0.41902669270833331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Sports">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjK-gD-GLg">
+                                <rect key="frame" x="50" y="327" width="117" height="42"/>
+                                <color key="backgroundColor" red="0.57919406890000003" green="0.30376519097222221" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="L5I-Z1-Yqf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Games">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-GF-Krh">
+                                <rect key="frame" x="231" y="468" width="117" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="fZU-EZ-bim"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-JN-2uO">
+                                <rect key="frame" x="50" y="169" width="117" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="Tp6-eJ-RmU"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="General">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-AW-oKm">
+                                <rect key="frame" x="22" y="44" width="345" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="g5p-Bt-oas">
-                                <rect key="frame" x="65" y="240" width="245" height="292"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="135" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lyY-fX-0J0">
-                                        <rect key="frame" x="0.0" y="0.0" width="245" height="32"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-JN-2uO">
-                                                <rect key="frame" x="0.0" y="0.0" width="59" height="32"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="General">
-                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-Cn-sxd">
-                                                <rect key="frame" x="194" y="0.0" width="51" height="32"/>
-                                                <color key="backgroundColor" red="0.95643446180555558" green="0.69352213541666663" blue="0.98491753472222221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="Movies">
-                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-ff-NIb">
-                                        <rect key="frame" x="0.0" y="132" width="245" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-TN-0Rd">
-                                                <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
-                                                <color key="backgroundColor" name="tcSeafoamGreen"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="Science">
-                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-GF-Krh">
-                                                <rect key="frame" x="192" y="0.0" width="53" height="30"/>
-                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="History">
-                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="wGV-nD-p2m">
-                                        <rect key="frame" x="0.0" y="262" width="245" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-FM-gaC">
-                                                <rect key="frame" x="0.0" y="0.0" width="53" height="30"/>
-                                                <color key="backgroundColor" red="0.95643446180555558" green="0.092436538827777789" blue="0.41902669270833331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="Sports">
-                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjK-gD-GLg">
-                                                <rect key="frame" x="195" y="0.0" width="50" height="30"/>
-                                                <color key="backgroundColor" red="0.57919406890000003" green="0.30376519097222221" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="2" height="2"/>
-                                                <state key="normal" title="Games">
-                                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="tcCharcoal"/>
                         <constraints>
-                            <constraint firstItem="NG7-gR-4jm" firstAttribute="bottom" secondItem="g5p-Bt-oas" secondAttribute="bottom" constant="135" id="JDj-KP-dci"/>
+                            <constraint firstItem="DEf-TN-0Rd" firstAttribute="top" secondItem="hjK-gD-GLg" secondAttribute="bottom" constant="111" id="0H3-oP-via"/>
+                            <constraint firstItem="EKs-Cn-sxd" firstAttribute="top" secondItem="KfA-AW-oKm" secondAttribute="bottom" constant="64" id="2KN-We-qSG"/>
+                            <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="BBz-FM-gaC" secondAttribute="trailing" constant="50" id="8hg-bI-eQL"/>
+                            <constraint firstItem="DEf-TN-0Rd" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="50" id="JIk-5u-g3p"/>
+                            <constraint firstItem="geE-JN-2uO" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="50" id="Q2f-Qq-seH"/>
                             <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="KfA-AW-oKm" secondAttribute="trailing" constant="15" id="Q8j-mS-Re9"/>
+                            <constraint firstItem="geE-JN-2uO" firstAttribute="top" secondItem="KfA-AW-oKm" secondAttribute="bottom" constant="64" id="U8M-8z-Gbi"/>
+                            <constraint firstItem="hjK-gD-GLg" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="50" id="X8B-Jx-Ji3"/>
                             <constraint firstItem="KfA-AW-oKm" firstAttribute="top" secondItem="NG7-gR-4jm" secondAttribute="top" constant="24" id="Z8K-bB-TBG"/>
-                            <constraint firstItem="g5p-Bt-oas" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="65" id="lNg-ID-tKR"/>
-                            <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="g5p-Bt-oas" secondAttribute="trailing" constant="65" id="rND-ww-nbu"/>
+                            <constraint firstItem="BBz-FM-gaC" firstAttribute="top" secondItem="EKs-Cn-sxd" secondAttribute="bottom" constant="124" id="hKo-oS-wUd"/>
+                            <constraint firstItem="hjK-gD-GLg" firstAttribute="top" secondItem="geE-JN-2uO" secondAttribute="bottom" constant="124" id="poj-4O-Dbm"/>
+                            <constraint firstItem="NG7-gR-4jm" firstAttribute="trailing" secondItem="EKs-Cn-sxd" secondAttribute="trailing" constant="50" id="r5W-FL-pst"/>
                             <constraint firstItem="KfA-AW-oKm" firstAttribute="leading" secondItem="NG7-gR-4jm" secondAttribute="leading" constant="15" id="xk1-DS-yMQ"/>
-                            <constraint firstItem="g5p-Bt-oas" firstAttribute="top" secondItem="KfA-AW-oKm" secondAttribute="bottom" constant="135" id="zcM-va-gJa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NG7-gR-4jm"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZy-7s-ocB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="134"/>
+            <point key="canvasLocation" x="981.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
