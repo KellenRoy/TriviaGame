@@ -85,6 +85,9 @@
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fsj-Un-FhE" kind="show" identifier="pressedMovies" id="t92-Se-jqh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-TN-0Rd">
                                 <rect key="frame" x="50" y="468" width="117" height="42"/>
@@ -95,6 +98,9 @@
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fsj-Un-FhE" kind="show" identifier="pressedScience" id="Ssl-wH-kFJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-FM-gaC">
                                 <rect key="frame" x="231" y="327" width="117" height="42"/>
@@ -105,6 +111,9 @@
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fsj-Un-FhE" kind="showDetail" identifier="pressedSports" id="qhS-ZC-usk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjK-gD-GLg">
                                 <rect key="frame" x="50" y="327" width="117" height="42"/>
@@ -118,7 +127,29 @@
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fsj-Un-FhE" kind="show" identifier="pressedGames" id="EMp-2F-yrc"/>
+                                </connections>
                             </button>
+<<<<<<< HEAD
+=======
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9t-GF-Krh">
+                                <rect key="frame" x="231" y="468" width="117" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="fZU-EZ-bim"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fsj-Un-FhE" kind="show" identifier="pressedHistory" id="zgG-lB-HYb"/>
+                                </connections>
+                            </button>
+>>>>>>> 14008330bafbdd9418d87c1b4ee256f2a5d4c2eb
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-JN-2uO">
                                 <rect key="frame" x="50" y="169" width="117" height="42"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,6 +162,9 @@
                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fsj-Un-FhE" kind="show" identifier="pressedGeneral" id="4y6-y6-BbD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-AW-oKm">
                                 <rect key="frame" x="22" y="44" width="345" height="61"/>
@@ -185,6 +219,21 @@
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="133.5832083958021"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6iE-hx-8RH">
+            <objects>
+                <viewController id="fsj-Un-FhE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ns-dw-D38">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fo6-FL-Inr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGC-No-8Du" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="143"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="tcCharcoal">
@@ -194,4 +243,7 @@
             <color red="0.34900000689999999" green="0.85500001910000001" blue="0.64300000670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4y6-y6-BbD"/>
+    </inferredMetricsTieBreakers>
 </document>

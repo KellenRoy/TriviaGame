@@ -8,8 +8,24 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class CategoriesController: UIViewController {
+    
+
+    //API Setups
+    //let generalQuestions = "https://opentdb.com/api.php?amount=10&category=9&type=multiple"
+   // let
+    
+    //let userData = try! JSON(data: jsonDATA)
+
+    
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +35,33 @@ class CategoriesController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+   
+    
+    
+    override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        
+        if identifier == "pressedSports" {
+            print("Transitioning to the Categories View Controller")
+        }
+        if identifier == "pressedScience" {
+            print("Transitioning to the Categories View Controller")
+        }
+        if identifier == "pressedGames" {
+            print("Transitioning to the Categories View Controller")
+        }
+        if identifier == "pressedMovies" {
+            print("Transitioning to the Categories View Controller")
+        }
+        if identifier == "pressedGeneral" {
+            print("Transitioning to the Categories View Controller")
+        }
+        if identifier == "pressedHistory" {
+            print("Transitioning to the Categories View Controller")
+        }
+        
     }
     
 }
