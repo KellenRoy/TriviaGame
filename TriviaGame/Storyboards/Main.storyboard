@@ -91,6 +91,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="generalButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="hhb-bO-cRg"/>
                                                     <segue destination="8kk-45-eEm" kind="show" identifier="pressedGeneral" id="Zeu-vO-R1r"/>
                                                 </connections>
                                             </button>
@@ -206,6 +207,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RVb-l1-yEG"/>
                     </view>
+                    <connections>
+                        <outlet property="gamesButton" destination="Fkg-d8-Pe5" id="Jyf-M3-EzJ"/>
+                        <outlet property="generalButton" destination="MGD-fe-19Y" id="voG-7W-hn9"/>
+                        <outlet property="historyButton" destination="w0A-XB-kDe" id="cP2-Vk-cpv"/>
+                        <outlet property="moviesButton" destination="OUz-YJ-jjS" id="gZf-b5-nHf"/>
+                        <outlet property="scienceButton" destination="2mU-37-YEc" id="6ZB-OE-kWh"/>
+                        <outlet property="sportsButton" destination="sfL-mO-rcc" id="ZBA-U2-lRi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgc-Pu-pg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
