@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViews()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,6 +25,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 //jkhkj
+    
+    func setUpViews(){
+        startButton.layer.cornerRadius = 8
+        startButton.layer.masksToBounds = true
+    }
 
     override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
