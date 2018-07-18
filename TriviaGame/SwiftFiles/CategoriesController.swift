@@ -21,6 +21,10 @@ class CategoriesController: UIViewController {
     @IBOutlet weak var historyButton: UIButton!
     
     var info: String?
+    var answer: String?
+    var answerDisplay2: String?
+    var answerDisplay3: String?
+    var answerDisplay4: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,6 +49,10 @@ class CategoriesController: UIViewController {
         
         let destination = segue.destination as! questionAnswerController
         destination.info = info
+        destination.answer = answer
+        destination.answerDisplay2 = answerDisplay2
+        destination.answerDisplay3 = answerDisplay3
+        destination.answerDisplay4 = answerDisplay4
     }
 
     
@@ -98,6 +106,13 @@ class CategoriesController: UIViewController {
         answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
         
         print("\(answerArray)")
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        
         
     }
     

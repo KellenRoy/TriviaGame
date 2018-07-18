@@ -25,6 +25,10 @@ class questionAnswerController: UIViewController
     static var score = 0
     
     var info: String?
+    var answer: String?
+    var answerDisplay2: String?
+    var answerDisplay3: String?
+    var answerDisplay4: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,25 @@ class questionAnswerController: UIViewController
             questionLabel.text = info
         }
         
+        if let answer = answer
+        {
+            answerA.setTitle(answer, for: .normal)
+        }
+        
+        if let answerDisplay2 = answerDisplay2
+        {
+            answerB.setTitle(answerDisplay2, for: .normal)
+        }
+        
+        if let answerDisplay3 = answerDisplay3
+        {
+            answerC.setTitle(answerDisplay3, for: .normal)
+        }
+        
+        if let answerDisplay4 = answerDisplay4
+        {
+            answerD.setTitle(answerDisplay4, for: .normal)
+        }
     }
     
 }
