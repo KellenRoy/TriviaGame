@@ -15,10 +15,14 @@ class questionAnswerController: UIViewController
 {
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var firstAnswerChoice: UILabel!
-    @IBOutlet weak var secondAnswerChoice: UILabel!
-    @IBOutlet weak var thirdAnswerChoice: UILabel!
-    @IBOutlet weak var fourthAnswerChoice: UILabel!
+    @IBOutlet weak var answerA: UIButton!
+    @IBOutlet weak var answerB: UIButton!
+    @IBOutlet weak var answerC: UIButton!
+    @IBOutlet weak var answerD: UIButton!
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    static var score = 0
     
     var info: String?
 

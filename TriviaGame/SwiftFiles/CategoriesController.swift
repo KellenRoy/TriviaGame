@@ -74,7 +74,7 @@ class CategoriesController: UIViewController {
 
         let userData = try! JSON(data: jsonData)
         let question1 = userData["results"][0]["question"].stringValue
-        let answer1 = userData["results"][0]["correct answer"].stringValue
+        let answer1 = userData["results"][0]["correct_answer"].stringValue
         let question2 = userData["results"][1]["question"].stringValue
         let question3 = userData["results"][2]["question"].stringValue
         let question4 = userData["results"][3]["question"].stringValue
@@ -86,6 +86,19 @@ class CategoriesController: UIViewController {
         let question10 = userData["results"][9]["question"].stringValue
         
         info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        print("\(answerArray)")
+       
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+         print("\(answerArray)")
+        
     }
     
 }

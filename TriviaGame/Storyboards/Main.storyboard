@@ -36,7 +36,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.17414215207099915" green="0.67228507995605469" blue="0.92839658260345459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -302,7 +302,7 @@
                                     <constraint firstItem="wGP-Nz-IGw" firstAttribute="width" secondItem="cNd-zA-Hdl" secondAttribute="width" id="mQh-Vc-e8e"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: _/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWV-x4-wqR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWV-x4-wqR">
                                 <rect key="frame" x="114" y="28" width="146" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -321,7 +321,12 @@
                         <viewLayoutGuide key="safeArea" id="eyf-0l-hT3"/>
                     </view>
                     <connections>
+                        <outlet property="answerA" destination="cNd-zA-Hdl" id="7zM-ho-P7a"/>
+                        <outlet property="answerB" destination="x0v-fB-pu9" id="9GP-ok-P3T"/>
+                        <outlet property="answerC" destination="w7x-18-eW5" id="3sq-gm-Zb2"/>
+                        <outlet property="answerD" destination="wGP-Nz-IGw" id="hjc-Dr-P5Y"/>
                         <outlet property="questionLabel" destination="YDJ-Z3-WiQ" id="6bp-vR-g1E"/>
+                        <outlet property="scoreLabel" destination="tWV-x4-wqR" id="w0G-Lg-26Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOC-Ee-EVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
