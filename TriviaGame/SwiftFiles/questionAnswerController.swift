@@ -32,6 +32,7 @@ class questionAnswerController: UIViewController
         {
             questionLabel.text = info
         }
+        
     }
     
 }

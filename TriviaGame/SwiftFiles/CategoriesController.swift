@@ -97,7 +97,7 @@ class CategoriesController: UIViewController {
         
         answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
         
-         print("\(answerArray)")
+        print("\(answerArray)")
         
     }
     
