@@ -27,6 +27,7 @@ class CategoriesController: UIViewController {
     @IBOutlet weak var thirdAnswerChoice: UILabel!
     @IBOutlet weak var fourthAnswerChoice: UILabel!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,9 +41,13 @@ class CategoriesController: UIViewController {
     
     
     @IBAction func generalButtonPressed(_ sender: Any) {
-        
         let generalQuestions = "https://opentdb.com/api.php?amount=10&category=9&type=multiple"
         
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+
         Alamofire.request(generalQuestions).validate().responseJSON() { response in
             switch response.result {
             case .success:
@@ -51,16 +56,17 @@ class CategoriesController: UIViewController {
                     
                     //setup complete, code under here
                     
-                    // example of JSON searching
-                    //let firstName = userData["results"][0]["name"]["first"].stringValue
-                    
-                    
+
                     
                 }
             case .failure(let error):
                 print(error)
             }
         }
+
+        let userData = try! JSON(data: jsonData)
+        let question1 = userData["results"][0]["question"].stringValue
+        print("\(question1)")
     }
     
 }
