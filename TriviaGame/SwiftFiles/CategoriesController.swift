@@ -20,14 +20,7 @@ class CategoriesController: UIViewController {
     @IBOutlet weak var scienceButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
     
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var firstAnswerChoice: UILabel!
-    @IBOutlet weak var secondAnswerChoice: UILabel!
-    @IBOutlet weak var thirdAnswerChoice: UILabel!
-    @IBOutlet weak var fourthAnswerChoice: UILabel!
-    
-
+    var info: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,7 +31,22 @@ class CategoriesController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func questionAnswer() {
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        // 2
+        if identifier == "pressedGeneral" {
+            print("Transitioning to the pressedGeneral View Controller")
+        }
+        
+        let destination = segue.destination as! questionAnswerController
+        destination.info = info
+    }
+
     
     @IBAction func generalButtonPressed(_ sender: Any) {
         let generalQuestions = "https://opentdb.com/api.php?amount=10&category=9&type=multiple"
@@ -66,7 +74,18 @@ class CategoriesController: UIViewController {
 
         let userData = try! JSON(data: jsonData)
         let question1 = userData["results"][0]["question"].stringValue
-        print("\(question1)")
+        let answer1 = userData["results"][0]["correct answer"].stringValue
+        let question2 = userData["results"][1]["question"].stringValue
+        let question3 = userData["results"][2]["question"].stringValue
+        let question4 = userData["results"][3]["question"].stringValue
+        let question5 = userData["results"][4]["question"].stringValue
+        let question6 = userData["results"][5]["question"].stringValue
+        let question7 = userData["results"][6]["question"].stringValue
+        let question8 = userData["results"][7]["question"].stringValue
+        let question9 = userData["results"][8]["question"].stringValue
+        let question10 = userData["results"][9]["question"].stringValue
+        
+        info = question1
     }
     
 }

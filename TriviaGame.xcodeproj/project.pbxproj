@@ -16,6 +16,7 @@
 		55BDF89E20FD3B3F000C3E49 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BDF89D20FD3B3F000C3E49 /* CategoriesController.swift */; };
 		55BDF8A020FD3DCE000C3E49 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BDF89F20FD3DCE000C3E49 /* Default-568h@2x.png */; };
 		F1211F2D20FEB0A6006EE2BB /* backup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1211F2C20FEB0A6006EE2BB /* backup.storyboard */; };
+		F1211F2F20FFBDB1006EE2BB /* questionAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1211F2E20FFBDB1006EE2BB /* questionAnswerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8DCE34A876AF6935B08DF57D /* Pods-TriviaGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-TriviaGame/Pods-TriviaGame.release.xcconfig"; sourceTree = "<group>"; };
 		EF44C76341D1F711FC765BCC /* Pods-TriviaGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TriviaGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TriviaGame/Pods-TriviaGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F1211F2C20FEB0A6006EE2BB /* backup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = backup.storyboard; sourceTree = "<group>"; };
+		F1211F2E20FFBDB1006EE2BB /* questionAnswerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionAnswerController.swift; sourceTree = "<group>"; };
 		FD5BE15D2B405BA1A67CFC0D /* Pods_TriviaGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TriviaGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				55BDF88A20FD16B6000C3E49 /* ViewController.swift */,
 				55BDF88820FD16B6000C3E49 /* AppDelegate.swift */,
 				55BDF89D20FD3B3F000C3E49 /* CategoriesController.swift */,
+				F1211F2E20FFBDB1006EE2BB /* questionAnswerController.swift */,
 			);
 			path = SwiftFiles;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BDF88B20FD16B6000C3E49 /* ViewController.swift in Sources */,
+				F1211F2F20FFBDB1006EE2BB /* questionAnswerController.swift in Sources */,
 				55BDF88920FD16B6000C3E49 /* AppDelegate.swift in Sources */,
 				55BDF89E20FD3B3F000C3E49 /* CategoriesController.swift in Sources */,
 			);

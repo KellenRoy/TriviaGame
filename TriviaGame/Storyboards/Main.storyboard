@@ -220,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Categories Controller-->
+        <!--Question Answer Controller-->
         <scene sceneID="v3H-EL-qj7">
             <objects>
-                <viewController id="8kk-45-eEm" customClass="CategoriesController" customModule="TriviaGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8kk-45-eEm" customClass="questionAnswerController" customModule="TriviaGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FfU-mN-sgV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,11 +321,7 @@
                         <viewLayoutGuide key="safeArea" id="eyf-0l-hT3"/>
                     </view>
                     <connections>
-                        <outlet property="firstAnswerChoice" destination="wiT-DW-Xxv" id="Wzs-rS-mQK"/>
-                        <outlet property="fourthAnswerChoice" destination="P7q-Dy-EAB" id="9HM-jh-fGE"/>
                         <outlet property="questionLabel" destination="YDJ-Z3-WiQ" id="6bp-vR-g1E"/>
-                        <outlet property="secondAnswerChoice" destination="E22-JB-VVr" id="JCg-MR-vk5"/>
-                        <outlet property="thirdAnswerChoice" destination="srM-TZ-Ubu" id="m2D-R7-ygt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOC-Ee-EVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,6 +338,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mDL-da-NrR"/>
+        <segue reference="Zeu-vO-R1r"/>
     </inferredMetricsTieBreakers>
 </document>
