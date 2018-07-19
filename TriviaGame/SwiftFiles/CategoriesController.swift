@@ -86,7 +86,12 @@ class CategoriesController: UIViewController {
         
         let jsonData = try! Data(contentsOf: url! as URL)
         let userData = try! JSON(data: jsonData)
-        let question1 = userData["results"][0]["question"].stringValue
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
+     //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
+        
+        
         /*
         let answer1 = userData["results"][0]["correct_answer"].stringValue
         let question2 = userData["results"][1]["question"].stringValue
@@ -125,7 +130,9 @@ class CategoriesController: UIViewController {
         let jsonData = try! Data(contentsOf: url! as URL)
         
         let userData = try! JSON(data: jsonData)
-        let question1 = userData["results"][0]["question"].stringValue
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         /*
          let answer1 = userData["results"][0]["correct_answer"].stringValue
          let question2 = userData["results"][1]["question"].stringValue
@@ -164,7 +171,9 @@ class CategoriesController: UIViewController {
         let jsonData = try! Data(contentsOf: url! as URL)
         
         let userData = try! JSON(data: jsonData)
-        let question1 = userData["results"][0]["question"].stringValue
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         /*
          let answer1 = userData["results"][0]["correct_answer"].stringValue
          let question2 = userData["results"][1]["question"].stringValue
@@ -222,7 +231,9 @@ class CategoriesController: UIViewController {
 //        }
         
         let userData = try! JSON(data: jsonData)
-        let question1 = userData["results"][0]["question"].stringValue
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         /*
          let answer1 = userData["results"][0]["correct_answer"].stringValue
          let question2 = userData["results"][1]["question"].stringValue
@@ -261,7 +272,9 @@ class CategoriesController: UIViewController {
         let jsonData = try! Data(contentsOf: url! as URL)
         
         let userData = try! JSON(data: jsonData)
-        let question1 = userData["results"][0]["question"].stringValue
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         /*
          let answer1 = userData["results"][0]["correct_answer"].stringValue
          let question2 = userData["results"][1]["question"].stringValue
@@ -304,7 +317,9 @@ class CategoriesController: UIViewController {
         let jsonData = try! Data(contentsOf: url! as URL)
         
         let userData = try! JSON(data: jsonData)
-        let question1 = userData["results"][0]["question"].stringValue
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         /*
          let answer1 = userData["results"][0]["correct_answer"].stringValue
          let question2 = userData["results"][1]["question"].stringValue
