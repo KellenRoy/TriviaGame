@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -105,7 +104,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedMovies" id="hhh-3N-GSa"/>
+                                                    <action selector="moviesButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="Txr-0J-pVj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -127,7 +126,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedGames" id="vjj-GO-9ae"/>
+                                                    <action selector="gamesButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="amj-Z5-Vze"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-mO-rcc">
@@ -140,7 +139,8 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8kk-45-eEm" kind="showDetail" identifier="pressedSports" id="oJL-XQ-RCa"/>
+                                                    <action selector="sportsButtonPressed:" destination="Hn9-ez-SzU" eventType="valueChanged" id="bpY-mo-Izy"/>
+                                                    <action selector="sportsButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="oU3-e1-bje"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -158,7 +158,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedScience" id="UBy-P0-CsS"/>
+                                                    <action selector="scienceButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="GRm-lq-JZZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0A-XB-kDe">
@@ -171,7 +171,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedHistory" id="mDL-da-NrR"/>
+                                                    <action selector="historyButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="z6P-oP-5MP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -214,6 +214,11 @@
                         <outlet property="moviesButton" destination="OUz-YJ-jjS" id="gZf-b5-nHf"/>
                         <outlet property="scienceButton" destination="2mU-37-YEc" id="6ZB-OE-kWh"/>
                         <outlet property="sportsButton" destination="sfL-mO-rcc" id="ZBA-U2-lRi"/>
+                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedSports" id="gl9-jy-L9w"/>
+                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedMovies" id="APk-9p-2jR"/>
+                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedGames" id="ZuD-SZ-Nrf"/>
+                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedScience" id="wFo-6V-nVl"/>
+                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedHistory" id="8NH-n4-gsU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgc-Pu-pg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,6 +348,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zeu-vO-R1r"/>
+        <segue reference="8NH-n4-gsU"/>
     </inferredMetricsTieBreakers>
 </document>

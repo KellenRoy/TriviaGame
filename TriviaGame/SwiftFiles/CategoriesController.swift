@@ -25,6 +25,7 @@ class CategoriesController: UIViewController {
     var answerDisplay2: String?
     var answerDisplay3: String?
     var answerDisplay4: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
@@ -65,6 +66,10 @@ class CategoriesController: UIViewController {
             print("Transitioning to the pressedGeneral View Controller")
         }
         
+        if identifier == "pressedSports" {
+            print("Transitioning to the pressedSports View Controller")
+        }
+        
         let destination = segue.destination as! questionAnswerController
         destination.info = info
         destination.answer = answer
@@ -75,29 +80,11 @@ class CategoriesController: UIViewController {
 
     
     @IBAction func generalButtonPressed(_ sender: Any) {
-        let generalQuestions = "https://opentdb.com/api.php?amount=10&category=9&type=multiple"
         
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
         
         
         let jsonData = try! Data(contentsOf: url! as URL)
-
-        Alamofire.request(generalQuestions).validate().responseJSON() { response in
-            switch response.result {
-            case .success:
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    
-                    //setup complete, code under here
-                    
-
-                    
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-
         let userData = try! JSON(data: jsonData)
         let question1 = userData["results"][0]["question"].stringValue
         /*
@@ -116,8 +103,6 @@ class CategoriesController: UIViewController {
         info = question1
         
         var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
-        print("\(answerArray)")
-       
         
         // Random answers generated
         
@@ -125,15 +110,234 @@ class CategoriesController: UIViewController {
         
         answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
         
-        print("\(answerArray)")
-        
         answer = answerArray[0].stringValue
         answerDisplay2 = answerArray[1].stringValue
         answerDisplay3 = answerArray[2].stringValue
         answerDisplay4 = answerArray[3].stringValue
         
         
-        
     }
     
+    @IBAction func moviesButtonPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=11&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        
+        let userData = try! JSON(data: jsonData)
+        let question1 = userData["results"][0]["question"].stringValue
+        /*
+         let answer1 = userData["results"][0]["correct_answer"].stringValue
+         let question2 = userData["results"][1]["question"].stringValue
+         let question3 = userData["results"][2]["question"].stringValue
+         let question4 = userData["results"][3]["question"].stringValue
+         let question5 = userData["results"][4]["question"].stringValue
+         let question6 = userData["results"][5]["question"].stringValue
+         let question7 = userData["results"][6]["question"].stringValue
+         let question8 = userData["results"][7]["question"].stringValue
+         let question9 = userData["results"][8]["question"].stringValue
+         let question10 = userData["results"][9]["question"].stringValue
+         */
+        
+        info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        performSegue(withIdentifier: "pressedMovies", sender: self)
+    }
+    
+    @IBAction func gamesButtonPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=15&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        
+        let userData = try! JSON(data: jsonData)
+        let question1 = userData["results"][0]["question"].stringValue
+        /*
+         let answer1 = userData["results"][0]["correct_answer"].stringValue
+         let question2 = userData["results"][1]["question"].stringValue
+         let question3 = userData["results"][2]["question"].stringValue
+         let question4 = userData["results"][3]["question"].stringValue
+         let question5 = userData["results"][4]["question"].stringValue
+         let question6 = userData["results"][5]["question"].stringValue
+         let question7 = userData["results"][6]["question"].stringValue
+         let question8 = userData["results"][7]["question"].stringValue
+         let question9 = userData["results"][8]["question"].stringValue
+         let question10 = userData["results"][9]["question"].stringValue
+         */
+        
+        info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        performSegue(withIdentifier: "pressedGames", sender: self)
+    }
+    
+    
+    @IBAction func sportsButtonPressed(_ sender: Any) {
+        let sportsQuestions = "https://opentdb.com/api.php?amount=10&category=21&type=multiple"
+        
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=21&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        
+//        Alamofire.request(sportsQuestions).validate().responseJSON() { response in
+//            switch response.result {
+//            case .success:
+//                if let value = response.result.value {
+//                    let json = JSON(value)
+//
+//                    //setup complete, code under here
+//
+//
+//
+//                }
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+        let userData = try! JSON(data: jsonData)
+        let question1 = userData["results"][0]["question"].stringValue
+        /*
+         let answer1 = userData["results"][0]["correct_answer"].stringValue
+         let question2 = userData["results"][1]["question"].stringValue
+         let question3 = userData["results"][2]["question"].stringValue
+         let question4 = userData["results"][3]["question"].stringValue
+         let question5 = userData["results"][4]["question"].stringValue
+         let question6 = userData["results"][5]["question"].stringValue
+         let question7 = userData["results"][6]["question"].stringValue
+         let question8 = userData["results"][7]["question"].stringValue
+         let question9 = userData["results"][8]["question"].stringValue
+         let question10 = userData["results"][9]["question"].stringValue
+         */
+        
+        info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        performSegue(withIdentifier: "pressedSports", sender: self)
+    }
+    
+    @IBAction func scienceButtonPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        
+        let userData = try! JSON(data: jsonData)
+        let question1 = userData["results"][0]["question"].stringValue
+        /*
+         let answer1 = userData["results"][0]["correct_answer"].stringValue
+         let question2 = userData["results"][1]["question"].stringValue
+         let question3 = userData["results"][2]["question"].stringValue
+         let question4 = userData["results"][3]["question"].stringValue
+         let question5 = userData["results"][4]["question"].stringValue
+         let question6 = userData["results"][5]["question"].stringValue
+         let question7 = userData["results"][6]["question"].stringValue
+         let question8 = userData["results"][7]["question"].stringValue
+         let question9 = userData["results"][8]["question"].stringValue
+         let question10 = userData["results"][9]["question"].stringValue
+         */
+        
+        info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        performSegue(withIdentifier: "pressedScience", sender: self)
+    }
+        
+        
+    
+    
+    @IBAction func historyButtonPressed(_ sender: Any) {
+        
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        
+        let userData = try! JSON(data: jsonData)
+        let question1 = userData["results"][0]["question"].stringValue
+        /*
+         let answer1 = userData["results"][0]["correct_answer"].stringValue
+         let question2 = userData["results"][1]["question"].stringValue
+         let question3 = userData["results"][2]["question"].stringValue
+         let question4 = userData["results"][3]["question"].stringValue
+         let question5 = userData["results"][4]["question"].stringValue
+         let question6 = userData["results"][5]["question"].stringValue
+         let question7 = userData["results"][6]["question"].stringValue
+         let question8 = userData["results"][7]["question"].stringValue
+         let question9 = userData["results"][8]["question"].stringValue
+         let question10 = userData["results"][9]["question"].stringValue
+         */
+        
+        info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        performSegue(withIdentifier: "pressedHistory", sender: self)
+    }
+
 }
+    
+    
+    
+
