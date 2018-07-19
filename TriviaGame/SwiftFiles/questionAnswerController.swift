@@ -22,13 +22,14 @@ class questionAnswerController: UIViewController
     
     @IBOutlet weak var scoreLabel: UILabel!
     
-    static var score = 0
+     var score = 0
     
     var info: String?
     var answer: String?
     var answerDisplay2: String?
     var answerDisplay3: String?
     var answerDisplay4: String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,4 +74,70 @@ class questionAnswerController: UIViewController
         answerD.layer.masksToBounds = true
     }
     
+    //Following button actions check for correct answer
+    
+    @IBAction func answerAPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        let userData = try! JSON(data: jsonData)
+       
+        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+            score = score + 1
+            scoreLabel.text = "Score: \(score)/10"
+            nextQuestion()
+        }
+        else { nextQuestion() }
+    
+    }
+    
+    @IBAction func answerBPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        let userData = try! JSON(data: jsonData)
+        
+        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+            score = score + 1
+            scoreLabel.text = "Score: \(score)/10"
+            nextQuestion()
+        }
+        else { nextQuestion() }
+    }
+    
+    @IBAction func answerCPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        let userData = try! JSON(data: jsonData)
+        
+        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+            score = score + 1
+            scoreLabel.text = "Score: \(score)/10"
+            nextQuestion()
+        }
+        else { nextQuestion() }
+    }
+    
+    @IBAction func answerDPressed(_ sender: Any) {
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
+        
+        
+        let jsonData = try! Data(contentsOf: url! as URL)
+        let userData = try! JSON(data: jsonData)
+        
+        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+            score = score + 1
+            scoreLabel.text = "Score: \(score)/10"
+            nextQuestion()
+        }
+        else { nextQuestion() }
+    }
+    
+    func nextQuestion() {
+        
+    }
 }

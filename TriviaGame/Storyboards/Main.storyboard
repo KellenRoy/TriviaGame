@@ -259,6 +259,9 @@
                                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerAPressed:" destination="8kk-45-eEm" eventType="touchUpInside" id="fJn-5j-4Pz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0v-fB-pu9">
                                                 <rect key="frame" x="187.5" y="0.0" width="147.5" height="146"/>
@@ -269,6 +272,9 @@
                                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerBPressed:" destination="8kk-45-eEm" eventType="touchUpInside" id="tLQ-ry-P9f"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -288,6 +294,9 @@
                                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerCPressed:" destination="8kk-45-eEm" eventType="touchUpInside" id="L3G-Zl-fXU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGP-Nz-IGw">
                                                 <rect key="frame" x="187.5" y="0.0" width="147.5" height="146"/>
@@ -298,6 +307,9 @@
                                                     <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerDPressed:" destination="8kk-45-eEm" eventType="touchUpInside" id="whc-1P-Sbc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

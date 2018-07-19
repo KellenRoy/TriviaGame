@@ -25,6 +25,8 @@ class CategoriesController: UIViewController {
     var answerDisplay2: String?
     var answerDisplay3: String?
     var answerDisplay4: String?
+    var score: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
