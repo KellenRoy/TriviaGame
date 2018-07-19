@@ -32,6 +32,7 @@ class questionAnswerController: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViews()
         if let info = info
         {
             questionLabel.text = info
@@ -56,6 +57,20 @@ class questionAnswerController: UIViewController
         {
             answerD.setTitle(answerDisplay4, for: .normal)
         }
+    }
+    
+    func setUpViews() {
+        answerA.layer.cornerRadius = 8
+        answerA.layer.masksToBounds = true
+        
+        answerB.layer.cornerRadius = 8
+        answerB.layer.masksToBounds = true
+        
+        answerC.layer.cornerRadius = 8
+        answerC.layer.masksToBounds = true
+        
+        answerD.layer.cornerRadius = 8
+        answerD.layer.masksToBounds = true
     }
     
 }

@@ -27,6 +27,7 @@ class CategoriesController: UIViewController {
     var answerDisplay4: String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViews()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -35,8 +36,25 @@ class CategoriesController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func questionAnswer() {
+    
+    func setUpViews() {
+        generalButton.layer.cornerRadius = 8
+        generalButton.layer.masksToBounds = true
         
+        moviesButton.layer.cornerRadius = 8
+        moviesButton.layer.masksToBounds = true
+        
+        gamesButton.layer.cornerRadius = 8
+        gamesButton.layer.masksToBounds = true
+        
+        sportsButton.layer.cornerRadius = 8
+        sportsButton.layer.masksToBounds = true
+        
+        scienceButton.layer.cornerRadius = 8
+        scienceButton.layer.masksToBounds = true
+        
+        historyButton.layer.cornerRadius = 8
+        historyButton.layer.masksToBounds = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,6 +100,7 @@ class CategoriesController: UIViewController {
 
         let userData = try! JSON(data: jsonData)
         let question1 = userData["results"][0]["question"].stringValue
+        /*
         let answer1 = userData["results"][0]["correct_answer"].stringValue
         let question2 = userData["results"][1]["question"].stringValue
         let question3 = userData["results"][2]["question"].stringValue
@@ -92,6 +111,7 @@ class CategoriesController: UIViewController {
         let question8 = userData["results"][7]["question"].stringValue
         let question9 = userData["results"][8]["question"].stringValue
         let question10 = userData["results"][9]["question"].stringValue
+        */
         
         info = question1
         
