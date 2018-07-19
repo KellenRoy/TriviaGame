@@ -255,7 +255,7 @@ class CategoriesController: UIViewController {
     }
     
     @IBAction func scienceButtonPressed(_ sender: Any) {
-        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&type=multiple")
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=17&type=multiple")
         
         
         let jsonData = try! Data(contentsOf: url! as URL)
