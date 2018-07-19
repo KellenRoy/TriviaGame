@@ -311,7 +311,7 @@ class CategoriesController: UIViewController {
     
     @IBAction func historyButtonPressed(_ sender: Any) {
         
-        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&type=multiple")
+        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=23&type=multiple")
         
         
         let jsonData = try! Data(contentsOf: url! as URL)
