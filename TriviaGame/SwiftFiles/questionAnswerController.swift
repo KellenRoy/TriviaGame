@@ -171,7 +171,7 @@ class questionAnswerController: UIViewController
         answerDisplay3 = answerArray[2].stringValue
         answerDisplay4 = answerArray[3].stringValue
         
-        
+        self.answerA.titleLabel?.text = answer
         
     }
     
