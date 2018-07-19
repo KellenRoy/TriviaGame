@@ -27,7 +27,9 @@ class CategoriesController: UIViewController {
     var answerDisplay3: String?
     var answerDisplay4: String?
     var score: Int = 0
+    var url: NSURL?
     
+    var correctAnswer: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,13 +67,7 @@ class CategoriesController: UIViewController {
         guard let identifier = segue.identifier else { return }
         
         // 2
-        if identifier == "pressedGeneral" {
-            print("Transitioning to the pressedGeneral View Controller")
-        }
-        
-        if identifier == "pressedSports" {
-            print("Transitioning to the pressedSports View Controller")
-        }
+        if identifier == "toQuestion" {
         
         let destination = segue.destination as! questionAnswerController
         destination.info = info
@@ -79,237 +75,42 @@ class CategoriesController: UIViewController {
         destination.answerDisplay2 = answerDisplay2
         destination.answerDisplay3 = answerDisplay3
         destination.answerDisplay4 = answerDisplay4
-        
+        destination.correctAnswer = correctAnswer
+        destination.url = url
+        }
     }
 
     
     @IBAction func generalButtonPressed(_ sender: Any) {
         
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
-        
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        let userData = try! JSON(data: jsonData)
-        let tempQuestion = userData["results"][0]["question"].stringValue
-        
-        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
-     //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
-        
-        
-        let correctAnswer = userData["results"][0]["correct_answer"].stringValue
-        /*
-        let question2 = userData["results"][1]["question"].stringValue
-        let question3 = userData["results"][2]["question"].stringValue
-        let question4 = userData["results"][3]["question"].stringValue
-        let question5 = userData["results"][4]["question"].stringValue
-        let question6 = userData["results"][5]["question"].stringValue
-        let question7 = userData["results"][6]["question"].stringValue
-        let question8 = userData["results"][7]["question"].stringValue
-        let question9 = userData["results"][8]["question"].stringValue
-        let question10 = userData["results"][9]["question"].stringValue
-        */
-        
-        info = question1
-        
-        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
-        
-        // Random answers generated
-        
-        let randomNumber = Int(arc4random_uniform(3))
-        
-        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
-        
-        answer = answerArray[0].stringValue
-        answerDisplay2 = answerArray[1].stringValue
-        answerDisplay3 = answerArray[2].stringValue
-        answerDisplay4 = answerArray[3].stringValue
-        
-    
-        
+        categorySelected(url: url!)
         
     }
     
     @IBAction func moviesButtonPressed(_ sender: Any) {
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=11&type=multiple")
+        categorySelected(url: url!)
         
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        
-        let userData = try! JSON(data: jsonData)
-        let tempQuestion = userData["results"][0]["question"].stringValue
-        
-        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
-        /*
-         let answer1 = userData["results"][0]["correct_answer"].stringValue
-         let question2 = userData["results"][1]["question"].stringValue
-         let question3 = userData["results"][2]["question"].stringValue
-         let question4 = userData["results"][3]["question"].stringValue
-         let question5 = userData["results"][4]["question"].stringValue
-         let question6 = userData["results"][5]["question"].stringValue
-         let question7 = userData["results"][6]["question"].stringValue
-         let question8 = userData["results"][7]["question"].stringValue
-         let question9 = userData["results"][8]["question"].stringValue
-         let question10 = userData["results"][9]["question"].stringValue
-         */
-        
-        info = question1
-        
-        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
-        
-        // Random answers generated
-        
-        let randomNumber = Int(arc4random_uniform(3))
-        
-        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
-        
-        answer = answerArray[0].stringValue
-        answerDisplay2 = answerArray[1].stringValue
-        answerDisplay3 = answerArray[2].stringValue
-        answerDisplay4 = answerArray[3].stringValue
-        
-        performSegue(withIdentifier: "pressedMovies", sender: self)
     }
     
     @IBAction func gamesButtonPressed(_ sender: Any) {
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=15&type=multiple")
-        
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        
-        let userData = try! JSON(data: jsonData)
-        let tempQuestion = userData["results"][0]["question"].stringValue
-        
-        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
-        /*
-         let answer1 = userData["results"][0]["correct_answer"].stringValue
-         let question2 = userData["results"][1]["question"].stringValue
-         let question3 = userData["results"][2]["question"].stringValue
-         let question4 = userData["results"][3]["question"].stringValue
-         let question5 = userData["results"][4]["question"].stringValue
-         let question6 = userData["results"][5]["question"].stringValue
-         let question7 = userData["results"][6]["question"].stringValue
-         let question8 = userData["results"][7]["question"].stringValue
-         let question9 = userData["results"][8]["question"].stringValue
-         let question10 = userData["results"][9]["question"].stringValue
-         */
-        
-        info = question1
-        
-        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
-        
-        // Random answers generated
-        
-        let randomNumber = Int(arc4random_uniform(3))
-        
-        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
-        
-        answer = answerArray[0].stringValue
-        answerDisplay2 = answerArray[1].stringValue
-        answerDisplay3 = answerArray[2].stringValue
-        answerDisplay4 = answerArray[3].stringValue
-        
-        performSegue(withIdentifier: "pressedGames", sender: self)
+        categorySelected(url: url!)
     }
     
     
     @IBAction func sportsButtonPressed(_ sender: Any) {
-        let sportsQuestions = "https://opentdb.com/api.php?amount=10&category=21&type=multiple"
+       
         
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=21&type=multiple")
+        categorySelected(url: url!)
         
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        
-//        Alamofire.request(sportsQuestions).validate().responseJSON() { response in
-//            switch response.result {
-//            case .success:
-//                if let value = response.result.value {
-//                    let json = JSON(value)
-//
-//                    //setup complete, code under here
-//
-//
-//
-//                }
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-        let userData = try! JSON(data: jsonData)
-        let tempQuestion = userData["results"][0]["question"].stringValue
-        
-        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
-        /*
-         let answer1 = userData["results"][0]["correct_answer"].stringValue
-         let question2 = userData["results"][1]["question"].stringValue
-         let question3 = userData["results"][2]["question"].stringValue
-         let question4 = userData["results"][3]["question"].stringValue
-         let question5 = userData["results"][4]["question"].stringValue
-         let question6 = userData["results"][5]["question"].stringValue
-         let question7 = userData["results"][6]["question"].stringValue
-         let question8 = userData["results"][7]["question"].stringValue
-         let question9 = userData["results"][8]["question"].stringValue
-         let question10 = userData["results"][9]["question"].stringValue
-         */
-        
-        info = question1
-        
-        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
-        
-        // Random answers generated
-        
-        let randomNumber = Int(arc4random_uniform(3))
-        
-        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
-        
-        answer = answerArray[0].stringValue
-        answerDisplay2 = answerArray[1].stringValue
-        answerDisplay3 = answerArray[2].stringValue
-        answerDisplay4 = answerArray[3].stringValue
-        
-        performSegue(withIdentifier: "pressedSports", sender: self)
     }
     
     @IBAction func scienceButtonPressed(_ sender: Any) {
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=17&type=multiple")
-        
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        
-        let userData = try! JSON(data: jsonData)
-        let tempQuestion = userData["results"][0]["question"].stringValue
-        
-        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
-        /*
-         let answer1 = userData["results"][0]["correct_answer"].stringValue
-         let question2 = userData["results"][1]["question"].stringValue
-         let question3 = userData["results"][2]["question"].stringValue
-         let question4 = userData["results"][3]["question"].stringValue
-         let question5 = userData["results"][4]["question"].stringValue
-         let question6 = userData["results"][5]["question"].stringValue
-         let question7 = userData["results"][6]["question"].stringValue
-         let question8 = userData["results"][7]["question"].stringValue
-         let question9 = userData["results"][8]["question"].stringValue
-         let question10 = userData["results"][9]["question"].stringValue
-         */
-        
-        info = question1
-        
-        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
-        
-        // Random answers generated
-        
-        let randomNumber = Int(arc4random_uniform(3))
-        
-        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
-        
-        answer = answerArray[0].stringValue
-        answerDisplay2 = answerArray[1].stringValue
-        answerDisplay3 = answerArray[2].stringValue
-        answerDisplay4 = answerArray[3].stringValue
-        
-        performSegue(withIdentifier: "pressedScience", sender: self)
+        categorySelected(url: url!)
     }
         
         
@@ -318,26 +119,23 @@ class CategoriesController: UIViewController {
     @IBAction func historyButtonPressed(_ sender: Any) {
         
         let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=23&type=multiple")
+        categorySelected(url: url!)
+    }
+    
+    func categorySelected(url: NSURL) {
         
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        
+        self.url = url
+        let jsonData = try! Data(contentsOf: url as URL)
         let userData = try! JSON(data: jsonData)
         let tempQuestion = userData["results"][0]["question"].stringValue
         
         let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
-        /*
-         let answer1 = userData["results"][0]["correct_answer"].stringValue
-         let question2 = userData["results"][1]["question"].stringValue
-         let question3 = userData["results"][2]["question"].stringValue
-         let question4 = userData["results"][3]["question"].stringValue
-         let question5 = userData["results"][4]["question"].stringValue
-         let question6 = userData["results"][5]["question"].stringValue
-         let question7 = userData["results"][6]["question"].stringValue
-         let question8 = userData["results"][7]["question"].stringValue
-         let question9 = userData["results"][8]["question"].stringValue
-         let question10 = userData["results"][9]["question"].stringValue
-         */
+        //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
+        
+        
+        correctAnswer = userData["results"][0]["correct_answer"].stringValue
+        print(correctAnswer)
+        
         
         info = question1
         
@@ -354,9 +152,10 @@ class CategoriesController: UIViewController {
         answerDisplay3 = answerArray[2].stringValue
         answerDisplay4 = answerArray[3].stringValue
         
-        performSegue(withIdentifier: "pressedHistory", sender: self)
+        
+        performSegue(withIdentifier: "toQuestion", sender: self)
     }
-
+ 
 }
     
     

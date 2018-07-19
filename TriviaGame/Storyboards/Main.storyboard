@@ -91,7 +91,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="generalButtonPressed:" destination="Hn9-ez-SzU" eventType="touchUpInside" id="hhb-bO-cRg"/>
-                                                    <segue destination="8kk-45-eEm" kind="show" identifier="pressedGeneral" id="Zeu-vO-R1r"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUz-YJ-jjS">
@@ -214,11 +213,7 @@
                         <outlet property="moviesButton" destination="OUz-YJ-jjS" id="gZf-b5-nHf"/>
                         <outlet property="scienceButton" destination="2mU-37-YEc" id="6ZB-OE-kWh"/>
                         <outlet property="sportsButton" destination="sfL-mO-rcc" id="ZBA-U2-lRi"/>
-                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedSports" id="gl9-jy-L9w"/>
-                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedMovies" id="APk-9p-2jR"/>
-                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedGames" id="ZuD-SZ-Nrf"/>
-                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedScience" id="wFo-6V-nVl"/>
-                        <segue destination="8kk-45-eEm" kind="show" identifier="pressedHistory" id="8NH-n4-gsU"/>
+                        <segue destination="8kk-45-eEm" kind="show" identifier="toQuestion" id="Yv0-Dm-t1R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgc-Pu-pg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -359,7 +354,4 @@
             <color red="0.34900000689999999" green="0.85500001910000001" blue="0.64300000670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="8NH-n4-gsU"/>
-    </inferredMetricsTieBreakers>
 </document>

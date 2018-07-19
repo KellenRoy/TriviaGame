@@ -30,6 +30,8 @@ class questionAnswerController: UIViewController
     var answerDisplay2: String?
     var answerDisplay3: String?
     var answerDisplay4: String?
+    var correctAnswer: String?
+    var url: NSURL?
     
 
     override func viewDidLoad() {
@@ -60,6 +62,7 @@ class questionAnswerController: UIViewController
             answerD.setTitle(answerDisplay4, for: .normal)
         }
         
+        print(correctAnswer!)
 
     }
     
@@ -80,67 +83,96 @@ class questionAnswerController: UIViewController
     //Following button actions check for correct answer
     
     @IBAction func answerAPressed(_ sender: Any) {
-        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
-        
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        let userData = try! JSON(data: jsonData)
-       
-        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+      
+        if (answerA.currentTitle == correctAnswer)  {
             score = score + 1
             scoreLabel.text = "Score: \(score)/10"
             nextQuestion()
+            print(correctAnswer!)
+            print(score)
         }
-        else { nextQuestion() }
+        else { nextQuestion()
+              print(correctAnswer!)
+            print(score)
+        }
     
     }
     
     @IBAction func answerBPressed(_ sender: Any) {
-        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
         
         
-        let jsonData = try! Data(contentsOf: url! as URL)
-        let userData = try! JSON(data: jsonData)
-        
-        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+        if (answerB.currentTitle == correctAnswer)  {
             score = score + 1
             scoreLabel.text = "Score: \(score)/10"
             nextQuestion()
+              print(correctAnswer!)
+            print(score)
         }
-        else { nextQuestion() }
+        else { nextQuestion()
+            print(score)
+            
+        }
     }
     
     @IBAction func answerCPressed(_ sender: Any) {
-        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
-        
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        let userData = try! JSON(data: jsonData)
-        
-        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+        if (answerC.currentTitle == correctAnswer)  {
             score = score + 1
             scoreLabel.text = "Score: \(score)/10"
             nextQuestion()
+              print(correctAnswer!)
+            print(score)
         }
-        else { nextQuestion() }
+        else { nextQuestion()
+            print(score)
+        }
     }
     
     @IBAction func answerDPressed(_ sender: Any) {
-        let url = NSURL(string: "https://opentdb.com/api.php?amount=10&category=9&type=multiple")
+       
         
-        
-        let jsonData = try! Data(contentsOf: url! as URL)
-        let userData = try! JSON(data: jsonData)
-        
-        if (answerA.titleLabel?.isEqual(userData["results"][0]["correct_answer"].stringValue))!  {
+        if (answerD.currentTitle == correctAnswer)  {
             score = score + 1
             scoreLabel.text = "Score: \(score)/10"
             nextQuestion()
+              print(correctAnswer!)
+            print(score)
         }
-        else { nextQuestion() }
+        else { nextQuestion()
+            print(score)
+        }
     }
     
     func nextQuestion() {
         
+        let jsonData = try! Data(contentsOf: url as! URL)
+        let userData = try! JSON(data: jsonData)
+        let tempQuestion = userData["results"][0]["question"].stringValue
+        
+        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
+        //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
+        
+        
+        correctAnswer = userData["results"][0]["correct_answer"].stringValue
+        print(correctAnswer)
+        
+        
+        info = question1
+        
+        var answerArray = userData["results"][0]["incorrect_answers"].arrayValue
+        
+        // Random answers generated
+        
+        let randomNumber = Int(arc4random_uniform(3))
+        
+        answerArray.insert(userData["results"][0]["correct_answer"], at: randomNumber)
+        
+        answer = answerArray[0].stringValue
+        answerDisplay2 = answerArray[1].stringValue
+        answerDisplay3 = answerArray[2].stringValue
+        answerDisplay4 = answerArray[3].stringValue
+        
+        
+        
     }
+    
 }
