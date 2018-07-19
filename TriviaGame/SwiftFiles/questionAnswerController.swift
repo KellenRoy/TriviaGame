@@ -25,6 +25,7 @@ class questionAnswerController: UIViewController
      var score = 0
     
     var info: String?
+    var scoreDisplay: String?
     var answer: String?
     var answerDisplay2: String?
     var answerDisplay3: String?
@@ -58,6 +59,8 @@ class questionAnswerController: UIViewController
         {
             answerD.setTitle(answerDisplay4, for: .normal)
         }
+        
+
     }
     
     func setUpViews() {

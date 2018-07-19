@@ -21,6 +21,7 @@ class CategoriesController: UIViewController {
     @IBOutlet weak var historyButton: UIButton!
     
     var info: String?
+    var scoreDisplay: String?
     var answer: String?
     var answerDisplay2: String?
     var answerDisplay3: String?
@@ -78,6 +79,7 @@ class CategoriesController: UIViewController {
         destination.answerDisplay2 = answerDisplay2
         destination.answerDisplay3 = answerDisplay3
         destination.answerDisplay4 = answerDisplay4
+        
     }
 
     
@@ -94,8 +96,8 @@ class CategoriesController: UIViewController {
      //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
         
         
+        let correctAnswer = userData["results"][0]["correct_answer"].stringValue
         /*
-        let answer1 = userData["results"][0]["correct_answer"].stringValue
         let question2 = userData["results"][1]["question"].stringValue
         let question3 = userData["results"][2]["question"].stringValue
         let question4 = userData["results"][3]["question"].stringValue
@@ -121,6 +123,8 @@ class CategoriesController: UIViewController {
         answerDisplay2 = answerArray[1].stringValue
         answerDisplay3 = answerArray[2].stringValue
         answerDisplay4 = answerArray[3].stringValue
+        
+    
         
         
     }
