@@ -122,7 +122,8 @@ class questionAnswerController: UIViewController
               print(correctAnswer!)
             print(score)
         }
-        else { nextQuestion()
+        else {
+            nextQuestion()
             print(score)
         }
     }
@@ -147,8 +148,9 @@ class questionAnswerController: UIViewController
         let jsonData = try! Data(contentsOf: url as! URL)
         let userData = try! JSON(data: jsonData)
         let tempQuestion = userData["results"][0]["question"].stringValue
-        
-        let question1 = tempQuestion.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
+        let tempQuestion2 = tempQuestion.replacingOccurrences(of: "&quot;", with: "\"", options: .literal, range: nil)
+        let tempQuestion3 = tempQuestion2.replacingOccurrences(of: "&ldquo;", with: "\"", options: .literal, range: nil)
+        let question1 = tempQuestion3.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
         
         
@@ -171,8 +173,13 @@ class questionAnswerController: UIViewController
         answerDisplay3 = answerArray[2].stringValue
         answerDisplay4 = answerArray[3].stringValue
         
+        self.questionLabel.text = info
         self.answerA.titleLabel?.text = answer
+        self.answerB.titleLabel?.text = answerDisplay2
+        self.answerC.titleLabel?.text = answerDisplay3
+        self.answerD.titleLabel?.text = answerDisplay4
         
+    
     }
     
 }
