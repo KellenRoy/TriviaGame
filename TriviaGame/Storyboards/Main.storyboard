@@ -18,24 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Trivia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-2P-Mf8">
-                                <rect key="frame" x="118" y="44" width="139" height="121.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Trivia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMw-2P-Mf8">
+                                <rect key="frame" x="118" y="44" width="241" height="184.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="73"/>
+                                <color key="textColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="2" height="2"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="10"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cce-cO-ryJ">
-                                <rect key="frame" x="100" y="532" width="175" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cce-cO-ryJ">
+                                <rect key="frame" x="100" y="458" width="175" height="75"/>
                                 <color key="backgroundColor" name="tcSeafoamGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="tFL-vm-HrA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="47" maxX="0.0" maxY="47"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.17414215207099915" green="0.67228507995605469" blue="0.92839658260345459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -47,8 +48,10 @@
                         <color key="backgroundColor" name="tcCharcoal"/>
                         <constraints>
                             <constraint firstItem="SEE-Te-ymK" firstAttribute="trailing" secondItem="uMw-2P-Mf8" secondAttribute="trailing" constant="118" id="BTi-HN-nWE"/>
+                            <constraint firstItem="uMw-2P-Mf8" firstAttribute="leading" secondItem="SEE-Te-ymK" secondAttribute="leading" constant="16" id="L6u-RO-nZF"/>
                             <constraint firstItem="cce-cO-ryJ" firstAttribute="leading" secondItem="SEE-Te-ymK" secondAttribute="leading" constant="100" id="d0G-sa-uK8"/>
                             <constraint firstItem="uMw-2P-Mf8" firstAttribute="leading" secondItem="SEE-Te-ymK" secondAttribute="leading" constant="118" id="drI-mE-iYr"/>
+                            <constraint firstItem="SEE-Te-ymK" firstAttribute="trailing" secondItem="uMw-2P-Mf8" secondAttribute="trailing" constant="16" id="iOm-Jp-Etz"/>
                             <constraint firstItem="SEE-Te-ymK" firstAttribute="trailing" secondItem="cce-cO-ryJ" secondAttribute="trailing" constant="100" id="kI6-SN-Q3N"/>
                             <constraint firstItem="uMw-2P-Mf8" firstAttribute="top" secondItem="SEE-Te-ymK" secondAttribute="top" constant="24" id="utD-DZ-Tik"/>
                             <constraint firstItem="SEE-Te-ymK" firstAttribute="bottom" secondItem="cce-cO-ryJ" secondAttribute="bottom" constant="60" id="xUs-TJ-a5v"/>
@@ -73,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-mz-bPb">
-                                <rect key="frame" x="16" y="169" width="343" height="402"/>
+                                <rect key="frame" x="16" y="173" width="343" height="398"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OR8-tk-QkQ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="98"/>
@@ -113,7 +116,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-s0-2VJ">
-                                        <rect key="frame" x="0.0" y="152" width="343" height="98"/>
+                                        <rect key="frame" x="0.0" y="150" width="343" height="98"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkg-d8-Pe5">
                                                 <rect key="frame" x="0.0" y="0.0" width="156" height="98"/>
@@ -145,7 +148,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1Jt-2G-NYW">
-                                        <rect key="frame" x="0.0" y="304" width="343" height="98"/>
+                                        <rect key="frame" x="0.0" y="300" width="343" height="98"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mU-37-YEc">
                                                 <rect key="frame" x="0.0" y="0.0" width="156" height="98"/>
@@ -186,12 +189,12 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di9-yj-Pxh">
-                                <rect key="frame" x="15" y="44" width="345" height="61"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <rect key="frame" x="15" y="44" width="345" height="65"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="2" height="1"/>
+                                <size key="shadowOffset" width="6" height="5"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="tcCharcoal"/>
