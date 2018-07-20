@@ -342,11 +342,57 @@
                         <outlet property="answerD" destination="wGP-Nz-IGw" id="hjc-Dr-P5Y"/>
                         <outlet property="questionLabel" destination="YDJ-Z3-WiQ" id="6bp-vR-g1E"/>
                         <outlet property="scoreLabel" destination="tWV-x4-wqR" id="w0G-Lg-26Q"/>
+                        <segue destination="4kT-x6-j9d" kind="show" identifier="toEndScreenSegue" id="qRU-D7-l6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOC-Ee-EVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869.5999999999999" y="142.57871064467767"/>
+        </scene>
+        <!--End Screen Controller-->
+        <scene sceneID="Vu1-cE-z2t">
+            <objects>
+                <viewController id="4kT-x6-j9d" customClass="endScreenController" customModule="TriviaGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFh-eN-W8H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVW-jQ-w54">
+                                <rect key="frame" x="112" y="421" width="150" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="tcSeafoamGreen"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Play Again?">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="4kT-x6-j9d" eventType="touchUpInside" id="hyO-4y-oyx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You got 0/10!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzE-Uo-XWC">
+                                <rect key="frame" x="32" y="123" width="311" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.019822822883725166" green="0.023552408441901207" blue="0.015007168054580688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="5" height="5"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="tcCharcoal"/>
+                        <viewLayoutGuide key="safeArea" id="K9i-7U-neZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="endTextLabel" destination="LzE-Uo-XWC" id="Koa-UB-MXY"/>
+                        <outlet property="playAgainButton" destination="CVW-jQ-w54" id="x1P-83-7A3"/>
+                        <segue destination="Hn9-ez-SzU" kind="show" identifier="playAgainSegue" id="cmh-sN-xDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t59-8i-Fk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="1253"/>
         </scene>
     </scenes>
     <resources>
@@ -357,4 +403,7 @@
             <color red="0.34900000689999999" green="0.85500001910000001" blue="0.64300000670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cmh-sN-xDB"/>
+    </inferredMetricsTieBreakers>
 </document>

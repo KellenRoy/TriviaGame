@@ -184,7 +184,20 @@ class questionAnswerController: UIViewController
         numberOfQuestionsAnswered = numberOfQuestionsAnswered + 1
     
         if numberOfQuestionsAnswered >= 10{
+        
+                        performSegue(withIdentifier: "toEndScreenSegue", sender: self)
+                    
+                }
+            }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        // 2
+        if identifier == "toEndScreen" {
             
+            let destination = segue.destination as! endScreenController
+            destination.score = score
         }
         
     }
