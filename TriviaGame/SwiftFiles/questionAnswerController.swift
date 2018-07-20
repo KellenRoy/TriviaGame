@@ -32,6 +32,7 @@ class questionAnswerController: UIViewController
     var answerDisplay4: String?
     var correctAnswer: String?
     var url: NSURL?
+    var numberOfQuestionsAnswered = 0
     
 
     override func viewDidLoad() {
@@ -150,7 +151,8 @@ class questionAnswerController: UIViewController
         let tempQuestion = userData["results"][0]["question"].stringValue
         let tempQuestion2 = tempQuestion.replacingOccurrences(of: "&quot;", with: "\"", options: .literal, range: nil)
         let tempQuestion3 = tempQuestion2.replacingOccurrences(of: "&ldquo;", with: "\"", options: .literal, range: nil)
-        let question1 = tempQuestion3.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
+        let tempQuestion4 = tempQuestion2.replacingOccurrences(of: "&rdquo;", with: "\"", options: .literal, range: nil)
+        let question1 = tempQuestion4.replacingOccurrences(of: "&#039;", with: "'", options: .literal, range: nil)
         //   question1 = tempQuestion.replacingOccurrences(of: "&quot;", with: "", options: .literal, range: nil)
         
         
@@ -174,12 +176,17 @@ class questionAnswerController: UIViewController
         answerDisplay4 = answerArray[3].stringValue
         
         self.questionLabel.text = info
-        self.answerA.titleLabel?.text = answer
-        self.answerB.titleLabel?.text = answerDisplay2
-        self.answerC.titleLabel?.text = answerDisplay3
-        self.answerD.titleLabel?.text = answerDisplay4
+        self.answerA.setTitle(answer, for: .normal)
+        self.answerB.setTitle(answerDisplay2, for: .normal)
+        self.answerC.setTitle(answerDisplay3, for: .normal)
+        self.answerD.setTitle(answerDisplay4, for: .normal)
         
+        numberOfQuestionsAnswered = numberOfQuestionsAnswered + 1
     
+        if numberOfQuestionsAnswered >= 10{
+            
+        }
+        
     }
     
 }
