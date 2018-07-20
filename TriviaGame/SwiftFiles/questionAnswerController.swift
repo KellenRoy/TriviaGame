@@ -194,7 +194,7 @@ class questionAnswerController: UIViewController
         guard let identifier = segue.identifier else { return }
         
         // 2
-        if identifier == "toEndScreen" {
+        if identifier == "toEndScreenSegue" {
             
             let destination = segue.destination as! endScreenController
             destination.score = score

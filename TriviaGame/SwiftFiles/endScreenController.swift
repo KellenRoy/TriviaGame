@@ -20,7 +20,7 @@ class endScreenController: UIViewController {
     @IBOutlet weak var playAgainButton: UIButton!
     
     override func viewDidLoad() {
-        endTextLabel.text = "You scored \(score)/10!"
+        endTextLabel.text = "You scored \(score!)/10!"
         setUpViews()
     }
     
